@@ -1,0 +1,75 @@
+.block-form {
+	margin: 5px 0;
+}
+
+.compact-form {
+	background: #fff;
+	border: none;
+	border-radius: 5px;
+	display: table;
+	margin: 15px 0 0 0;
+	padding: 4px;
+	width: 100%;
+}
+	.compact-form__placeholder-label {
+		display: none;
+	}
+	.compact-form__cell {
+		display: table-cell;
+	}
+		.compact-form__cell .btn {
+			display: inline-block;
+			margin: 0;
+			width: 100%;
+		}
+		.compact-form__field {
+			border: none;
+			padding: 14px 6px;
+			width: 100%;
+		}
+			.compact-form__field::-webkit-input-placeholder {
+				color: #666;
+			}
+			.compact-form__field::-moz-input-placeholder {
+				color: #666;
+			}
+			.compact-form__field::-ms-input-placeholder {
+				color: #666;
+			}
+			/* Cheers, big Chris: http://codepen.io/chriscoyier/pen/CvoeL */
+			.compact-form__field:focus::-webkit-input-placeholder {
+				-webkit-transition: opacity 0s 0.4s ease; 
+				opacity: 0;
+			}
+			.compact-form__field:focus::-moz-placeholder {
+				transition: opacity 0s 0.4s ease; 
+				opacity: 0;
+			}
+			.compact-form__field:focus::-ms-placeholder {
+				transition: opacity 0s 0.4s ease; 
+				opacity: 0;
+			}
+
+	/* An even compact-er compact form */
+	.compact-form--smaller {
+		font-size: 85%;
+		line-height: 1.2;
+		.compact-form__field {
+			padding-top: 8px;
+			padding-bottom: 8px;
+		}
+		.btn {
+			padding: 8px;
+		}
+	}
+
+
+@include media-query(palm){
+	.google-map {
+		height: $height-of-poster +100px;
+	}
+		.google-map__container {
+			top: -50px;
+			height: $height-of-poster +150px;
+		}
+}

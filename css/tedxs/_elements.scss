@@ -1,0 +1,268 @@
+// Buttons and other reusable elements
+.btn {
+	background: darken($ted-red, 5);
+	background: -moz-linear-gradient(top, $ted-red, #d60000 100%);
+	background: -ms-linear-gradient(top, $ted-red, #d60000 100%);
+	background: -o-linear-gradient(top, $ted-red, #d60000 100%);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from($ted-red), to(#d60000));
+	background: -webkit-linear-gradient(top, $ted-red, #d60000 100%);
+	background: linear-gradient(top, $ted-red, #d60000 100%);
+	border: 2px solid darken($ted-red, 10);
+	border-radius: $brand-round;
+	clear: both;
+	color: #fff;
+	display: inline-block;
+	font-weight: bold;
+	margin: 0.2em 0 $master-padding 0;
+	position: relative;
+	padding: 12px 15px 12px 2.8em;
+	text-decoration: none;
+	text-shadow: $btn-text-shadow;
+	&:hover {
+		background: $ted-red;
+		color: #fff;
+		text-shadow: $btn-text-shadow-hover;
+	}
+}
+	.btn--next {
+		padding-right: 30px;
+		&:after { 	// arrow
+			content: '';
+			border-color: transparent transparent transparent $button-highlight;
+			border-style: solid;
+			border-width: 6px;
+			display: block;
+			height: 0;
+			margin: -5px 0 0 0;
+			position: absolute;
+			right: 6px;
+			top: 50%;
+			width: 0;
+		}
+	}
+	/* A lower-priority button */
+	.btn--nadir {
+		background: lighten(#323232, 65);
+		background: -moz-linear-gradient(top, lighten(#323232, 69), lighten(#323232, 65) 100%);
+		background: -moz-linear-gradient(top, lighten(#323232, 69), lighten(#323232, 65) 100%);
+		background: -ms-linear-gradient(top, lighten(#323232, 69), lighten(#323232, 65) 100%);
+		background: -o-linear-gradient(top, lighten(#323232, 69), lighten(#323232, 65) 100%);
+		background: -webkit-gradient(linear, 0 0, 0 100%, from(lighten(#323232, 69)), to(lighten(#323232, 65)));
+		background: -webkit-linear-gradient(top, lighten(#323232, 69), lighten(#323232, 65) 100%);
+		background: linear-gradient(top, lighten(#323232, 69), lighten(#323232, 65) 100%);
+		border: 2px solid lighten(#323232, 65);
+		color: #666;
+		text-shadow: rgba(255,255,255,0.3) 0 -1px 0;
+		&:hover {
+			background: lighten(#323232, 69);
+			color: #444;
+			text-shadow: rgba(255,255,255,0.6) 0 -1px 0;
+		}
+	}
+	.btn--no-icon {
+		padding-left: 15px;
+	}
+
+/* Make full width and increase click-area */
+@include media-query(palm) {
+	.btn {
+		display: block;
+		padding: 16px;
+		padding-left: 2.8em;
+	}
+		/* For buttons that don't want to grow to full-width */
+		.btn--inline {
+			display: inline-block;
+		}
+}
+
+.media {
+	@extend .cf; // inuit clearfix
+	@include media-gradient;
+	border-top: 2px solid #ccc;
+//	font-size: 0.9em;
+	padding: $master-padding;
+}
+	/* Not always necesary - only when there are many media elements grouped together */
+	.media__block {
+//		margin-bottom: $master-padding;
+	}
+	.media__heading:first-child {
+		margin-top:0;
+	}
+	.media .btn:last-child,
+	.media > p:last-child,
+	.media > ul:last-child /* important for boxes in flow of main copy */ {
+		margin-bottom: 0;
+	}
+
+	.media--reduced {
+		font-size: 0.9em;
+		margin-top: 40px;
+		margin-bottom: $master-padding;
+	}
+
+	@include media-query(palm) {
+		.sidebar .media {
+			margin-left: -($master-padding - 10px);
+			margin-right: -($master-padding - 10px);
+			margin-bottom: 0;
+			padding: $master-padding - 10px;
+		}
+	}
+
+/* =Icons */
+
+/* Icon font */
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'fontello';
+  src: url("../font/fontello.eot?75971391");
+  src: url("../font/fontello.eot?75971391#iefix") format('embedded-opentype'), url("../font/fontello.woff?8514431") format('woff'), url("../font/fontello.ttf?75971391") format('truetype'), url("../font/fontello.svg?75971391#fontello") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+		font-family: 'fontello';
+		src: url('../font/fontello.svg?75971391#fontello') format('svg');
+	}
+}
+*/
+.icon {
+	margin-right: 0.55em;
+	margin-left: -0.2em;
+	&:before {
+		font-family: 'fontello';
+		font-style: normal;
+		font-weight: normal;
+		speak: none;
+		display: inline-block;
+		text-decoration: inherit;
+		width: 1em;
+		margin-right: 0.2em;
+		margin-right: 0.2em;
+		text-align: center;
+		/* For safety - reset parent styles, that can break glyph codes*/
+		font-variant: normal;
+		text-transform: none;
+		/* fix buttons height, for twitter bootstrap */
+		line-height: 1em;
+		/* Animation center compensation - magrins should be symmetric */
+		/* remove if not needed */
+//		margin-left: 0.2em;
+		/* you can be more comfortable with increased icons size */
+		/* font-size: 120%; */
+		/* Uncomment for 3D effect */
+		/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+	}
+}
+		button:hover .icon:before,
+		a:hover .icon:before {
+			-ms-transform:scale(1.3, 1.3);
+			-moz-transform:scale(1.3, 1.3);
+			-o-transform:scale(1.3, 1.3);
+			-webkit-transform: none;
+			transform:scale(1.3, 1.3);
+			-ms-transition:all 0.06s linear;
+			-moz-transition:all 0.06s linear;
+			-o-transition:all 0.06s linear;
+			-webkit-transition:all 0.06s linear;
+			transition:all 0.06s linear;
+//			transform-origin: 50% 25%;
+		}
+
+	/* Icons within buttons, yeah... I know */
+	.btn .icon {
+		position: absolute;
+		left: 15px;
+	}
+
+	/* Icons ustilising sprite */
+	.icon--sprite {
+		background: url(../img/bg/icon-sprite.png) 0 0 no-repeat;
+		display: inline-block;
+		-webkit-filter: grayscale(100%);
+		filter: grayscale(100%);
+		margin: 0 5px 5px 0;
+		height: 16px;
+		vertical-align: text-top;
+		width: 16px;
+	}
+		a:hover .icon--sprite {
+			-webkit-filter: none;
+			filter: none;
+		}
+	.icon--twitter {
+		@extend .icon--sprite;
+	}
+	.icon--storify {
+		@extend .icon--sprite;
+		background-position: -20px 0;
+	}
+	.icon--lanyrd {
+		@extend .icon--sprite;
+		background-position: 0 -20px;
+	}
+	.icon--flickr {
+		@extend .icon--sprite;
+		background-position: -20px -20px;
+	}
+
+	/* Provided by icon font - names lifted from fontello */
+//	.icon--lanyrd:before { content: '\2d'; } /* '-' */
+	.icon--home:before { content: '\2302'; } /* '⌂' */
+	.icon--heart-empty:before { content: '\2661'; } /* '♡' */
+	.icon--heart:before { content: '\2665'; } /* '♥' */
+	.icon--direction:before { content: '\27a2'; } /* '➢' */
+	.icon--th-list:before { content: '\e022'; } /* '' */
+	.icon--th-large:before { content: '\e023'; } /* '' */
+	.icon--play-circled2:before { content: '\e05b'; } /* '' */
+	.icon--help-circled:before { content: '\e704'; } /* '' */
+	.icon--map:before { content: '\e727'; } /* '' */
+//	.icon--flickr:before { content: '\f303'; } /* '' */
+//	.icon--twitter:before { content: '\f309'; } /* '' */
+	.icon--users:before { content: '👥'; } /* '\1f465' */
+	.icon-calendar:before { content: '📅'; } /* '\1f4c5' */
+	.icon--ticket:before { 
+		content: '🎫'; /* '\1f3ab' */
+		/* make this one a little bigger & remove line-height to compensate */
+		font-size: 120%;
+		line-height: 0.9em;
+	}
+	.icon--users:before { content: '👥'; } /* '\1f465' */
+	.icon--calendar:before { content: '📅'; } /* '\1f4c5' */
+
+	/* Following ties into #menu in _nav.scss - isn't great reuse practice */
+	.icon--menu {
+		display: inline-block;
+		background: none;
+		border-top: 3px solid $button-highlight;
+		border-bottom: 3px solid $button-highlight;
+		height: 9px;
+		margin: 0 0 5px 4px;
+		width: 18px;
+		&:after {
+			background: $button-highlight;
+			content: '';
+			display: block;
+			height: 3px;
+			margin-top: 9px;
+			width: 18px;
+		}
+	}
+		.is-active .icon--menu,
+		.btn:hover .icon--menu {
+			border-top-color: #fff;
+			border-bottom-color: #fff;
+		}
+	
+		@media screen and (max-width: 460px) {
+			.icon--menu {
+				margin: -1px 0 5px 0;
+			}
+		}

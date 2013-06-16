@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+/*!*
+ *
+ * tedxsheffield.com
+ * by Ian Parr / @devolute / devolute.net
+ * See humans.txt for some big, big love
+ *
+ */
+
+/*------------------------------------*\
+    STYLE.CSS
+\*------------------------------------*/
+/**
+ *
+ * sass --watch style.scss:style.min.css --style compressed
+ *
+ * Here we pull in some variables, include the inuit.css framework, then add our
+ * project-specific components afterwards.
+ */
+
+
+/**
+ * Setup
+ */
+@import "vars";
+@import "inuit.css/inuit";
+
+
+
+
+
+/**
+ * She’s all yours, cap’n... Begin importing your stuff here.
+ */
+@import "tedxs/brand";
+@import "tedxs/grid";
+@import "tedxs/base";
+@import "tedxs/header";
+@import "tedxs/typography";
+@import "tedxs/nav";
+@import "tedxs/footer";
+@import "tedxs/forms";
+@import "tedxs/speakers";
+@import "tedxs/media";
+@import "tedxs/elements";
+@import "tedxs/ie";
+
+/**
+ * Modernizr styles in use
+ * 
+ * no-js, svg
+ * 
+ */

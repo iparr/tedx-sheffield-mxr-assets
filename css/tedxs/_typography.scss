@@ -1,0 +1,50 @@
+/* =Headings */
+h1,
+.alpha {
+	display: block;
+	line-height: 1.1em;
+	font-family: $brand-face;
+	font-size: 2.7em;
+	font-weight: normal;
+	margin: 1em 0 0.5em 0;
+}
+/*	h1:first-of-type {
+		margin-top:0;
+	}*/
+	.page-title {
+		border-top: 2px solid #ccc;
+		margin-top: 0;
+		margin-bottom: 20px;
+		padding-top: $master-padding - 5;
+	}
+h2,
+.beta {
+	color: #444;
+	display: block;
+	font: bold normal normal 1.5em/1.1em Helvetica,Arial,sans-serif;
+	margin: 1.6em 0 0.5em 0;
+}
+h3,
+.gamma {
+	font: bold normal normal 1.2em/1.1em Helvetica,Arial,sans-serif;
+	margin: 1.3em 0 0.5em 0;
+}
+
+
+/* Font-tweaking for mobiles */
+@include media-query(palm) {
+	h1,
+	.alpha {
+		font-size:1.8em;
+	}
+	h2,
+	.beta {
+		font-size:1.2em;
+	}
+}
+
+/* Smaller body text */
+@mixin smaller-body-text {
+	font-size:85%;
+	line-height:1.2;
+}

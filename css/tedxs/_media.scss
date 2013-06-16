@@ -1,0 +1,139 @@
+/* =Flickr embeds
+	Inherits tricks from inuit.css' ".multi-list"
+*/
+/*.flickr-container {
+}*/
+	/* the following are not my classnames, but the ones Flickr imposes on you... grrr
+	*/
+	.flickr_badge_image {
+		float: left;
+//		margin: 0 10px 10px 0;
+		width: 33.33%;
+		padding: 0 10px 10px 0;
+	}
+
+		@include media-query(palm){
+			.flickr_badge_image {
+				width: 25%;
+			}
+		}
+		@media screen and (max-width: 640px) {
+			.flickr_badge_image {
+				width: 16.66%;
+			}
+		}
+		@media screen and (max-width: 400px) {
+			.flickr_badge_image {
+				width: 25%;
+			}
+		}
+
+		.flickr_badge_image img {
+			height: auto;
+			width: 100%;
+		}
+	.flickr-container__description {
+		clear: both;
+		@include smaller-body-text;
+		margin-bottom: 0.5em;
+	}
+
+/* =YouTube embeds */
+.video-container {
+	height: 0;
+	margin-bottom: $master-padding;
+//	margin-bottom: -2px;
+	overflow: hidden;
+	position: relative;
+	padding-bottom: 56.25%;
+}
+	.video-container iframe,
+	.video-container object,
+	.video-container embed { /* via http://webdesignerwall.com/tutorials/css-elastic-videos */
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+/* =Google map */
+.google-map {
+	background: #ebe6dc;
+	height: $height-of-poster;
+	overflow: hidden;
+	position: relative;
+	top: -($height-of-poster + ($master-padding+10));
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: -$height-of-poster;
+	width: 100%;
+//	max-width: (1125px + (60));
+	max-width: 1200px;
+}
+	.google-map__container {
+		height: 100%;
+	}
+		#gMap img { /* fix annoying GMap problem with max-width on mobile */
+			max-width: none;
+		}
+.google-map-search {
+	background: #fff;
+	display: table;
+	margin-top: 15px;
+	padding: 4px;
+	position: relative;
+	width: 100%;
+}
+	.google-map-search__label {
+		display: none;
+	}
+	.google-map-search__field {
+		border: none;
+		display: table-cell;
+//		padding: 11px 10px;
+		padding: 14px 10px;
+//		padding-right: 90px;
+	}
+		/* Cheers, big Chris: http://codepen.io/chriscoyier/pen/CvoeL */
+		.google-map-search__field:focus::-webkit-input-placeholder {
+			-webkit-transition: opacity 0s 0.4s ease; 
+			opacity: 0;
+		}
+		.google-map-search__field:focus::-moz-placeholder {
+			transition: opacity 0s 0.4s ease; 
+			opacity: 0;
+		}
+		.google-map-search__field:focus::-ms-placeholder {
+			transition: opacity 0s 0.4s ease; 
+			opacity: 0;
+		}
+	.google-map-search .btn {
+		display: table-cell; /*BROKEN in stupid bloody IOS6, hence crappy float hack */
+		float: right;
+		margin: 0;
+//		right: 3px;
+//		position: absolute;
+//		top: 3px;
+	}
+
+@include media-query(palm){
+	.google-map {
+		height: $height-of-poster +100px;
+	}
+		.google-map__container {
+			top: -50px;
+			height: $height-of-poster +150px;
+		}
+	.google-map-search__field {
+		width: 65%;
+//		padding-top: 15px;
+//		padding-bottom: 15px;
+		padding-top: 18px;
+		padding-bottom: 18px;
+//		width: 100%;
+	}
+	.google-map-search .btn {
+		width: 35%;
+	}
+}

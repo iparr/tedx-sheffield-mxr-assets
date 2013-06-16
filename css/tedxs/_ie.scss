@@ -1,0 +1,30 @@
+/* IE layout problems that don't belong anywhere else */
+
+/* Limit IE8 responsiveness */
+.lt-ie9 .container {
+	min-width: 60em;
+}
+.lt-ie9 .desk-six-tenths {
+	width: 60%;
+}
+.lt-ie9 .push--desk-one-tenth {
+	left: 10%;
+}
+.lt-ie9 .desk-three-tenths {
+	width: 30%;
+}
+
+/* Oh, you can just bloody well go inline IE7 */
+.lt-ie8 .grid__item {
+	width: 100%;
+}
+	.lt-ie8 .primary-nav {
+		margin-top: 0;
+		margin-bottom: $master-padding;
+	}
+	.lt-ie8 .push--desk-one-tenth {
+		left: auto;
+	}	
+.lt-ie8 .flickr-container {
+	display: none;
+}

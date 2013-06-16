@@ -1,0 +1,82 @@
+.header {
+	margin: $master-padding+10 0;
+}
+	.primary-logo {
+		display: block;
+		height: auto;
+		line-height: 0;
+		overflow: hidden;
+	}
+		.primary-logo a {
+			display: inline-block;
+		}
+			/* Can probably take a guess on this... */
+			.lt-ie8 .primary-logo a {
+				display: block;
+			}
+		.primary-logo__img {
+			display: block;
+			width: 400px;
+			height: 77px;
+		}
+		.primary-logo__text {
+			display: block;
+			left: 0;
+			overflow: hidden;
+			position: absolute;
+			text-indent: 100%;
+			top: 0;
+			white-space: nowrap;
+			width: 0;
+		}
+	#top {
+		visibility: hidden;
+		position: absolute;
+	}
+
+	@include media-query(palm){
+		.header {
+			margin: ($master-padding - 6) 0 ($master-padding - 5) 0;
+		}
+			.primary-logo {
+				margin-top: 2px;
+			}
+				.primary-logo a {
+					display: block;
+				}
+				.primary-logo__img {
+					height: 3.8em; /* 57px */
+					width: 20em; /* 300px */
+				}
+	}
+
+	@media screen and (max-width: 460px) {
+		.header {
+			height: 50px;
+			min-height: auto;
+		}
+			.primary-logo {
+				margin-top: 5px;
+			}
+				.primary-logo__img {
+					max-height: 44px;
+					width: auto;
+				}
+	}
+
+/* No SVG support (IE8) - replace with PNG */
+.no-svg .primary-logo {
+	background: url(../img/tedx-sheffield-logo-400-76.png) 0 0 no-repeat;
+	background-size: contain;
+	width: auto;
+	height: 77px;
+}
+	.no-svg .primary-logo__img {
+		visibility: hidden;
+	}
+
+@include media-query(palm){
+	.no-svg .primary-logo {
+		height: 45px;
+	}
+}

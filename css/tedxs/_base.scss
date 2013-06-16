@@ -1,0 +1,153 @@
+//$button-highlight: transparentize(#fff, 0.1);
+$button-highlight: #fff;
+
+
+body {
+	background:#fff;
+	background: -moz-linear-gradient(#fff 2px, #dbdbdb 4px, #fff 88px) no-repeat;
+	background: -ms-linear-gradient(#fff 2px, #dbdbdb 4px, #fff 88px) no-repeat;
+	background: -o-linear-gradient(#fff 2px, #dbdbdb 4px, #fff 88px) no-repeat;
+	background: -webkit-linear-gradient(#fff 2px, #dbdbdb 4px, #fff 88px) no-repeat;
+	background: linear-gradient(#fff 2px, #dbdbdb 4px, #fff 88px) no-repeat;
+	border-top: solid #333 2px;
+	color: $body-text-color;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: $base-font-size;
+	line-height: $line-height-ratio;
+}
+
+@media screen and (max-width: 1245px) {
+	/* Slightly dirty hack to fix big posters causing horizontal scroll bar */
+	body {
+		overflow-x: hidden;
+	}
+}
+
+/* =Links */
+a {
+	color: $ted-red;
+	text-decoration: none;
+	&:hover {
+		color: darken($ted-red, 20%);
+		text-decoration: none
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:active,
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+
+/* =Quotes */
+
+
+/* =Structural */
+.container {
+	margin: 0 auto;
+	padding: 0 $master-padding;
+	width: 100%;
+	max-width:75em;
+}
+
+	@include media-query(palm){
+		.container {
+			padding-left: $master-padding - 10px;
+			padding-right: $master-padding - 10px;
+		}
+	}
+
+
+/* =Poster */
+
+/* Set poster height (this is passed on to _nav) */
+$height-of-poster: 390px;
+
+.poster {
+	height: $height-of-poster;
+	margin-left: -(($master-padding*2)+10);
+	margin-right: -(($master-padding*2)+10);
+	margin-bottom: $master-padding+10;
+	position: relative;
+	width: auto;
+}
+	.poster--index {
+		background-color: #eee;
+	/* 	background-image: url(../img/poster/cityscape-01.jpg); */
+		background-image: url(../img/poster/upper-chapel-01.jpg);
+//		background-position: center center;
+		background-position: left bottom;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	@media screen and (max-width: 785px) {
+		.poster--index {
+			background-image: url(../img/poster/upper-chapel-01-small.jpg);
+		}
+	}
+	.poster__heading {
+		background: #000;
+		background: rgba(0, 0, 0, 0.7);
+		bottom: $master-padding+10;
+		color: #fff;
+		left: 0;
+		margin: 0;
+		padding: 15px $master-padding 15px ($master-padding*2)+10;
+		position: absolute;
+	}
+		.poster__heading h1,
+		.poster__heading .alpha {
+			margin: 0;
+		}
+		.poster__heading h2,
+		.poster__heading .beta {
+			color: darken(#fff, 10);
+			margin: 0;
+		}
+	.poster__credit {
+		background: rgba(0, 0, 0, 0.5);
+		bottom: 0;
+		color: #ccc;
+		font-size: 0.8em;
+		padding: 4px;
+		position: absolute;
+		right: (($master-padding*2)+10);
+		z-index: 40; /* Put this above the nav */
+	}
+	.poster--map {
+		margin-right: 0;
+		z-index: 10;
+	}
+
+	@include media-query(palm){
+		.poster {
+			margin-left: -$master-padding + 10px;
+			margin-right: -$master-padding + 10px;
+			padding: $master-padding - 10px;
+		}
+			.poster--index {
+				height: $height-of-poster - 160px;
+			}
+			.poster__heading {
+				bottom: 0;
+				padding: $master-padding - 10px;
+				right: 0;
+			}
+				.poster--map .poster__heading {
+					bottom: -100px;
+				}
+			.poster__credit {
+				background: none;
+				bottom: -2.5em;
+//				color: darken(#ccc, 40);
+				right: $master-padding - 10px;
+			}
+	}
+
+/* Sponsor logos */
+.sponsor-logo {
+	display: block;
+	padding: $master-padding/2 0;
+}

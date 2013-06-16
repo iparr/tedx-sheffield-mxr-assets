@@ -1,0 +1,9 @@
+/* Extends inuit.css grid functionality */
+@media screen and (max-width: 640px) {
+	.mobile-one-whole {
+		width: 100%;
+	}
+	.mobile-one-half {
+		width: 50%;
+	}
+}

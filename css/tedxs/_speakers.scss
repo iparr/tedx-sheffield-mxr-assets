@@ -1,0 +1,296 @@
+/* =Speakers */
+$speaker-thumb-width: 120px;
+$speaker-thumb-height: 120px;
+
+@mixin play-icon {
+	@extend .icon:before;
+	@extend .icon--play-circled2:before;
+	color: #fff;
+	content: "";
+	display: block;
+	font-size: 3em;
+//	height: $speaker-thumb-height;
+	margin-top: -0.5em;
+	opacity: 0.5;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	width: 100% !important;
+	z-index: 20;
+	-webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	-o-transition: opacity 0.3s ease-in-out;
+	-ms-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
+}
+
+@mixin play-icon-small {
+	font-size: 66%;
+}
+
+@mixin play-icon-hover {
+	opacity: 0.9;
+	transform: none !important;
+	-webkit-transition: opacity 0.15s ease-in-out;
+	-moz-transition: opacity 0.15s ease-in-out;
+	-o-transition: opacity 0.15s ease-in-out;
+	-ms-transition: opacity 0.15s ease-in-out;
+	transition: opacity 0.15s ease-in-out;
+}
+
+@mixin floated-speaker-img {
+	float: left;
+	left: 0;
+	margin: 0 20px 1em 0;
+	position: relative;
+}
+	@mixin floated-speaker-smaller {
+		height: auto;
+		width: 80px;
+	}
+		
+
+.speaker {
+	clear: both;
+	min-height: $speaker-thumb-height - 10px;
+	margin: 0 0 4em 150px;
+	position: relative;
+}
+	.speaker__link {
+		&:hover {
+			.speaker__name {
+				color: darken($ted-red, 20%);
+			}
+			.speaker__talk-title {
+				color: darken(#333, 20%);
+			}
+		}
+		& .is-video:before {
+			display: none;
+		}
+	}
+		.speaker__thumb {
+			height: $speaker-thumb-height;
+			left: -150px;
+			position: absolute;
+			top: 0;
+			width: $speaker-thumb-width;
+		}
+			.speaker__thumb--youtube {
+				height: auto;
+			}
+			.is-video .speaker__thumb:before {
+				@include play-icon;
+			}
+				.is-video .speaker__link:hover .speaker__thumb:before {
+					@include play-icon-hover;
+				}
+		.speaker__title {
+			font-size: 1.4em;
+			margin-top: 0;
+		}
+			.speaker__name {
+				color: $ted-red;
+				font-weight: normal;
+			}
+			.speaker__talk-title {
+				color: #333;
+				display: inline;
+				font-weight: bold;
+				&:before {
+					color: #999;
+					content: "/ ";
+					font-weight: normal;
+				}
+			}
+			.speaker__description {
+				color: #666;
+				display: block;
+				font-size: 0.6em;
+				line-height: 1.2;
+				margin-top: 0.3em;
+			}
+
+@include media-query(portable) {
+	.speaker {
+		margin-left: 0;
+		margin-bottom: 3em;
+		min-height: $speaker-thumb-height/2;
+	}
+		/* Make images even smaller */
+		.speaker__thumb {
+			@include floated-speaker-img;
+			@include floated-speaker-smaller;
+			@include play-icon-small;
+		}
+}
+
+@include media-query(palm) {
+	.speaker__title {
+		font-size: 1.2em;
+	}
+}
+
+
+/* For speakers displayed in a grid
+	- requires different roll-over behaviour at <800px */
+.grid-container {
+	clear: both;
+	margin-bottom: 1em;
+	position: relative;
+}
+	.grid-container__control {
+		display: none; /* Only display if js available */
+		position: absolute;
+		right: 20 - 8px;
+		top: 0;
+	}
+		.js .grid-container__control {
+			color: lighten($body-text-color, 60) !important;
+			display: block;
+		}
+			.grid-container__control .is-active {
+				color: lighten($body-text-color, 30) !important;
+			}
+			.grid-container__control li:hover {
+				color: $ted-red;
+				cursor: pointer;
+			}
+	.grid-container__list {
+		margin-bottom: 0;
+	}
+
+/* Linear mode */
+/* Different height for these because of less content */
+.grid-container .speaker {
+	min-height: $speaker-thumb-height - 30px;
+	margin-bottom: 1em;
+}
+	.grid-container .speaker__thumb {
+		height: auto;
+//		left: -100px;
+//		position: absolute;
+	}
+
+	@include media-query(portable) {
+		.grid-container .speaker {
+			margin: 0 0 1em 100px;
+			min-height: $speaker-thumb-height/2;
+		}
+			.grid-container .speaker__thumb {
+				left: -100px;
+				position: absolute;
+			}
+	}
+
+		/* Hide thumbs when things get too tight */
+		@media screen and (max-width: 300px) {
+			.grid-container .speaker {
+				min-height: 0;
+				margin-left: 0;
+			}
+				.grid-container .speaker__thumb {
+					display: none;
+				}
+		}
+
+/* Grid mode */
+.is-grid .speaker {
+	clear: none;
+	float: left;
+	min-height: auto;
+	overflow: hidden;
+	position: relative;
+	margin: 0;
+	width: 25%;
+}
+	/* Ensures grid drops onto next line when img height inconsistent - need IE hack (?) */
+	.is-grid .speaker:nth-child(4n+1) {
+		clear: left;
+	}
+	.is-grid .speaker__link {
+		display: block;
+		margin: 0 20px 20px 0;
+		overflow: hidden;
+		position: relative;
+		min-height: auto;
+	}
+		.is-grid .speaker__title {
+			bottom: -80px;
+			background: #000;
+			background: rgba(0, 0, 0, 0.8);
+			color: #fff;
+			font-size: 0.9em;
+			left: 0;
+			margin: 0;
+			opacity: 0;
+			padding: 10px;
+			position: absolute;
+			right: 0;
+			z-index: 20;
+			-webkit-transition: opacity 0.4s linear, bottom 0.4s ease-in-out;
+			-moz-transition: opacity 0.4s linear, bottom 0.4s ease-in-out;
+			-o-transition: opacity 0.4s linear, bottom 0.4s ease-in-out;
+			-ms-transition: opacity 0.4s linear, bottom 0.4s ease-in-out;
+			transition: opacity 0.4s linear, bottom 0.4s ease-in-out;
+		}
+			.is-grid .speaker__name {
+				color: #fff !important;
+				font-weight: bold;
+			}
+			.is-grid .speaker__talk-title,
+			.is-grid .speaker__description {
+				display: none;
+			}
+			.is-grid .speaker:hover {
+				.speaker__thumb:before {
+					/* This is the opposite of non-grid mode */
+					opacity: 0;
+				}
+				& .speaker__title {
+					bottom: 0;
+					opacity: 1;
+				}
+			}
+		.is-grid .speaker__thumb {
+			display: block;
+			height: auto;
+			left: auto;
+			margin: 0;
+			position: relative;
+			width: 100%;
+		}
+			.is-grid .speaker__thumb img {
+				display: block; /* Removes unecessary whitespace */
+				width: 100%;
+			}
+
+/* For dedicated speaker pages */
+	.speaker-heading__name {
+		color: $ted-red;
+		margin: 0 0 0.1em 0;
+	}
+	.speaker-heading__title {
+		display: block;
+//		font-size: 0.556em;
+		font-weight: bold;
+		line-height: 1.1;
+		margin-top: 0;
+	}
+	.speaker-heading__description {
+		/* Could probably do with a .gamma this, tbh */
+		color: #666;
+		display: block;
+		font: bold normal normal 0.9em/1 Helvetica,Arial,sans-serif;
+		margin: 0 0 0.5em 0;
+	}
+
+.speaker-bio-img {
+	@include floated-speaker-img;
+}
+
+@include media-query(portable) {
+	.speaker-bio-img {
+		@include floated-speaker-smaller;
+	}
+}
