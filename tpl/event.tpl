@@ -14,6 +14,7 @@
 					&sortby=`menuindex`
 					&sortdir=`ASC`
 					&limit=`99`
+					[#&where=`{"class_key:!=":"modWebLink"}`#]
 
 					&tpl=`@FILE grSpeakers.tpl`
 					&tplPath=`[[++assets_path]]/tpl/chunks/`
