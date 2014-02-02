@@ -12,16 +12,19 @@ $resourceParent = $modx -> resource -> get('parent');
 $wayfinderHereId = null;
 $wayfinderLevel = 2;
 
+// Change this every year
+$thisYearId = 72;
+
 $result = null;
 
 // If page likely to need navigation cheat - i.e. is speaker or event tpl
 if ( $resourceTemplate === 4 || $resourceTemplate === 2 ) {
 
 	// if latest page OR parent is latest page
-	if ( $resourceId === 27 || $resourceParent === 27 ) {
+	if ( $resourceId === $thisYearId || $resourceParent === $thisYearId ) {
 
 		// ...then hereId itself
-		$wayfinderHereId = 27;
+		$wayfinderHereId = $thisYearId;
 		// and only show top level
 		$wayfinderLevel = 1;
 
