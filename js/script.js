@@ -80,7 +80,7 @@ $(document).ready(function() {
 	function eventMap() {
 		var mapOptions = {
 			zoom: 15,
-			center: new google.maps.LatLng(53.380856,-1.468529),
+			center: new google.maps.LatLng(53.3820824,-1.4796725),
 			disableDefaultUI: true,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		}
@@ -95,7 +95,7 @@ $(document).ready(function() {
 	* other.
 	*/
 	var points = [
-		['Upper Chapel', 53.380856, -1.468529, 0]
+		['St George\'s Church', 53.3820824, -1.4796725, 0]
 	];
 		
 	function setMarkers(map, locations) {

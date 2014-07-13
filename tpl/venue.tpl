@@ -15,7 +15,7 @@
 							<div class="compact-form__cell">
 								<input type="text" name="saddr" placeholder="Get directions from&hellip;" class="compact-form__field" />
 							</div>
-							<input type="hidden" name="daddr" value="45 Surrey St, Sheffield, South Yorkshire S1 2LG" />
+							<input type="hidden" name="daddr" value="17 Mappin Street, Sheffield, S1 4DT" />
 							<div class="compact-form__cell">
 								<button id="gMapSearch" type="submit" value="OK" class="btn">
 									<i class="icon icon--direction"></i>
