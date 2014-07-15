@@ -9,7 +9,7 @@
 					[[*longtitle]]
 				</div>
 	
-	 			<a class="poster__credit" href="http://www.flickr.com/photos/brunopostle/">photo credit: Bruno Postle</a>
+	 			<a class="poster__credit" href="https://www.flickr.com/photos/richpicings/14167657988/">photo credit: Richard Smith</a>
 	
 			</div>
 

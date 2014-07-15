@@ -76,17 +76,18 @@ $height-of-poster: 390px;
 	.poster--index {
 		background-color: #eee;
 	/* 	background-image: url(../img/poster/cityscape-01.jpg); */
-		background-image: url(../img/poster/upper-chapel-01.jpg);
+		// background-image: url(../img/poster/upper-chapel-01.jpg);
+		background-image: url(../img/poster/george-bird-01.jpg);
 //		background-position: center center;
 		background-position: left bottom;
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
-	@media screen and (max-width: 785px) {
+/*	@media screen and (max-width: 785px) {
 		.poster--index {
-			background-image: url(../img/poster/upper-chapel-01-small.jpg);
+			background-image: url(../img/poster/george-bird-01-small.jpg);
 		}
-	}
+	}*/
 	.poster__heading {
 		background: #000;
 		background: rgba(0, 0, 0, 0.7);
