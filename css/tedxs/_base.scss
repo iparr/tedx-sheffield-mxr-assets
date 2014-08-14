@@ -83,11 +83,6 @@ $height-of-poster: 390px;
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
-/*	@media screen and (max-width: 785px) {
-		.poster--index {
-			background-image: url(../img/poster/george-bird-01-small.jpg);
-		}
-	}*/
 	.poster__heading {
 		background: #000;
 		background: rgba(0, 0, 0, 0.7);
@@ -129,7 +124,21 @@ $height-of-poster: 390px;
 			padding: $master-padding - 10px;
 		}
 			.poster--index {
-				height: $height-of-poster - 160px;
+				background-color: #000;
+				background-size: 100%;
+				background-position: center top;
+				height: auto;
+				padding-bottom: 0;
+				padding-top: 30.3vw;
+				margin-bottom: $master-padding *2;
+
+				.poster__heading {
+					background: none;
+					position: relative;
+					margin-top: $master-padding - 10px;
+					margin-right: -$master-padding + 10px;
+					margin-left: -$master-padding + 10px;
+				}
 			}
 			.poster__heading {
 				bottom: 0;
