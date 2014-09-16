@@ -36,7 +36,7 @@
 
 	<base href="[[++site_url]]" />
 
-	<link rel="stylesheet" href="assets/css/style.min.css?v=140715">
+	<link rel="stylesheet" href="assets/css/style.min.css?v=140814">
 	<script src="assets/js/vendor/modernizr.custom.62825.js"></script>
 	<link type="text/plain" rel="author" href="http://tedxsheffield.com/humans.txt">
 </head>

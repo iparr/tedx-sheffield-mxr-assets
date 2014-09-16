@@ -4,23 +4,23 @@
 				<div class="grid__item  one-whole palm-one-half mobile-one-whole">
 
 					<h2 class="media__heading gamma">Follow us&hellip;</h2>
-		
+
 					<ul class="nav nav--stacked">
 						<li>
 							<a class="twitter" href="http://twitter.com/tedxsheffield">
-								<i class="icon icon--twitter"></i>
+								<i aria-hidden="true" class="icon icon--twitter"></i>
 								Twitter @TEDxSheffield
 							</a>
 						</li>
 						<li>
 							<a href="http://lanyrd.com/2013/tedxshf/">
-								<i class="icon icon--lanyrd"></i>
+								<i aria-hidden="true" class="icon icon--lanyrd"></i>
 								Lanyrd
 							</a>
 						</li>
 						<li>
 							<a href="http://www.flickr.com/photos/tags/tedxsheffield/">
-								<i class="icon icon--flickr"></i>
+								<i aria-hidden="true" class="icon icon--flickr"></i>
 								Flickr
 							</a>
 						</li>
@@ -56,18 +56,17 @@
 
 					<h2 class="gamma">Interested in sponsoring us?</h2>
 
-					<a href="[[~65]]" class="btn btn--nadir"><i class="icon icon--heart"></i> Learn more</a>
+					<a href="[[~65]]" class="btn btn--nadir"><i aria-hidden="true" class="icon icon--heart"></i> Learn more</a>
 
-				</div>[[-
+				</div>
 				[[*id:isnot=`[[++site_start]]`:then=`<!--
 				--><div class="grid__item  one-whole palm-one-half mobile-one-whole">
 
 					<h2 class="gamma">Tickets</h2>
 
-					<a href="[[~63]]" class="btn"><i class="icon icon--ticket"></i> Book 2013 tickets now</a>
+					<a href="[[~63]]" class="btn"><i class="icon aria-hidden="true" icon--ticket"></i> Book 2013 tickets now</a>
 
 				</div>`]]
-				]]
 			</div>
 
 		</div>
