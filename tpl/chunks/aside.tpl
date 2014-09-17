@@ -64,7 +64,7 @@
 
 					<h2 class="gamma">Tickets</h2>
 
-					<a href="[[~63]]" class="btn"><i class="icon aria-hidden="true" icon--ticket"></i> Book 2014 tickets now</a>
+					<a href="[[~63]]" class="btn"><i aria-hidden="true" class="icon icon--ticket"></i> Book 2014 tickets now</a>
 
 				</div>`]]
 			</div>
