@@ -138,6 +138,7 @@
 	margin-left: -0.2em;
 	&:before {
 		font-family: 'fontello';
+		-webkit-font-smoothing: antialiased;
 		font-style: normal;
 		font-weight: normal;
 		speak: none;
@@ -228,7 +229,7 @@
 //	.icon--twitter:before { content: '\f309'; } /* '' */
 	.icon--users:before { content: '👥'; } /* '\1f465' */
 	.icon-calendar:before { content: '📅'; } /* '\1f4c5' */
-	.icon--ticket:before { 
+	.icon--ticket:before {
 		content: '🎫'; /* '\1f3ab' */
 		/* make this one a little bigger & remove line-height to compensate */
 		font-size: 120%;
@@ -260,7 +261,7 @@
 			border-top-color: #fff;
 			border-bottom-color: #fff;
 		}
-	
+
 		@media screen and (max-width: 460px) {
 			.icon--menu {
 				margin: -1px 0 5px 0;
