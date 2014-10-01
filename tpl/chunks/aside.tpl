@@ -13,13 +13,13 @@
 							</a>
 						</li>
 						<li>
-							<a href="http://lanyrd.com/2013/tedxshf/">
+							<a href="http://lanyrd.com/2014/tedxsheffield/">
 								<i aria-hidden="true" class="icon icon--lanyrd"></i>
 								Lanyrd
 							</a>
 						</li>
 						<li>
-							<a href="http://www.flickr.com/photos/tags/tedxsheffield/">
+							<a href="https://www.flickr.com/photos/97495038@N04/">
 								<i aria-hidden="true" class="icon icon--flickr"></i>
 								Flickr
 							</a>
@@ -45,8 +45,7 @@
 
 					<h2 class="gamma">Pictures from Flickr&hellip;</h2>
 					<div class="flickr-container">
-						<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=6&amp;display=latest&amp;size=s&amp;layout=x&amp;source=all_tag&amp;tag=tedxsheffield"></script>
-						<p class="flickr-container__description">Tag your photographs with <a href="http://www.flickr.com/photos/tags/tedxsheffield/">#TEDxSheffield</a> to show yours here.</p>
+						<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=6&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=97495038@N04"></script>
 					</div>
 
 				</div>
