@@ -1,5 +1,5 @@
 [[getResources?
-	&parents=`27`
+	&parents=`72`
 	&depth=`1`
 	&sortby=`menuindex`
 	&sortdir=`ASC`
