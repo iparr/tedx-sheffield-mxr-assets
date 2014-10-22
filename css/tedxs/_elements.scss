@@ -213,6 +213,10 @@
 		@extend .icon--sprite;
 		background-position: -20px -20px;
 	}
+	.icon--facebook {
+		@extend .icon--sprite;
+		background-position: -40px 0;
+	}
 
 	/* Provided by icon font - names lifted from fontello */
 //	.icon--lanyrd:before { content: '\2d'; } /* '-' */

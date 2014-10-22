@@ -24,6 +24,12 @@
 								Flickr
 							</a>
 						</li>
+						<li>
+							<a href="http://www.facebook.com/TEDxSheffield">
+								<i aria-hidden="true" class="icon icon--facebook"></i>
+								Facebook
+							</a>
+						</li>
 					</ul>
 
 					<!-- Begin MailChimp Signup Form -->
