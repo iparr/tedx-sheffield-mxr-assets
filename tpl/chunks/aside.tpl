@@ -66,11 +66,11 @@
 				</div>
 				[[*id:isnot=`[[++site_start]]`:then=`<!--
 				--><div class="grid__item  one-whole palm-one-half mobile-one-whole">
-
+<!--
 					<h2 class="gamma">Tickets</h2>
 
 					<a href="[[~63]]" class="btn"><i aria-hidden="true" class="icon icon--ticket"></i> Book 2014 tickets now</a>
-
+-->
 				</div>`]]
 			</div>
 
