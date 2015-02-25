@@ -1,7 +1,7 @@
 <?php
 /*
 	appropriateImage - Outputs a thumbnail based if appropriate thumbnail is available
-	Depends on: phpThumb
+	Depends on: pThumb w/ Resizer (or similar - untested)
 				Specific tvs
 	By Ian Parr - http://devolute.net
 */
@@ -58,14 +58,14 @@ if ( !empty($tvTalkPoster) ) {
 }*/
 
 
-// Assemble image w/ phpThumb
+// Assemble image w/ pThumb
 if ( $useYoutubeThumb == true ) {
 
 	$image = 'http://img.youtube.com/vi/' . $tvTalkYoutube . '/1.jpg';
 
 } else {
 
-	$image = $modx->runSnippet('phpthumbof', array(
+	$image = $modx->runSnippet('pthumb', array(
 		'input' => $bestImage,
 		'options' => $phpthumbOptions
 	));
