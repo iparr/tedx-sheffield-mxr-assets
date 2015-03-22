@@ -1,3 +1,4 @@
 /components/
 /css/style.min.css
 /js/script.min.js
+*.css.map
