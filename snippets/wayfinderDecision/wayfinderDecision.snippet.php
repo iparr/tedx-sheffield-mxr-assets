@@ -13,7 +13,7 @@ $wayfinderHereId = null;
 $wayfinderLevel = 2;
 
 // Change this every year
-$thisYearId = 72;
+$thisYearId = 85;
 
 $result = null;
 
@@ -45,7 +45,7 @@ if ( $resourceTemplate === 4 || $resourceTemplate === 2 ) {
 		}
 
 		// find weblink that matches it
-		$matchingWeblink =  $modx->getObject('modResource',array(   
+		$matchingWeblink =  $modx->getObject('modResource',array(
 			'alias' => $partnerAlias,
 			'class_key' => 'modWebLink'
 		));
