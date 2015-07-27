@@ -18,7 +18,7 @@ $(document).ready(function() {
 
 		// Has nav been duped?
 		if ($('#nav--dupe').length == 0) {
-		
+
 			// Move to the right place
 			var navCopy = $('#nav').clone(true);
 			navCopy.attr('id', 'nav--dupe');
@@ -80,7 +80,7 @@ $(document).ready(function() {
 	function eventMap() {
 		var mapOptions = {
 			zoom: 15,
-			center: new google.maps.LatLng(53.3820824,-1.4796725),
+			center: new google.maps.LatLng(53.3810614,-1.4667874),
 			disableDefaultUI: true,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		}
@@ -95,9 +95,9 @@ $(document).ready(function() {
 	* other.
 	*/
 	var points = [
-		['St George\'s Church', 53.3820824, -1.4796725, 0]
+		['Crucible Theatre', 53.3810614, -1.4667874, 0]
 	];
-		
+
 	function setMarkers(map, locations) {
         // Add markers to the map
 
