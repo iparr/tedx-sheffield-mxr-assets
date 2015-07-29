@@ -4,13 +4,13 @@
 		<div class="grid__item  one-whole">
 
 			<div class="poster poster--index">
-	
+
 				<div class="poster__heading">
 					[[*longtitle]]
 				</div>
-	
-	 			<a class="poster__credit" href="https://www.flickr.com/photos/richpicings/14167657988/">photo credit: Richard Smith</a>
-	
+
+	 			<span class="poster__credit">photo credit: Craig Fleming</span>
+
 			</div>
 
 		</div>
