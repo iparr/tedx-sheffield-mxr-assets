@@ -9,7 +9,7 @@
 					[[*longtitle]]
 				</div>
 
-	 			<span class="poster__credit">photo credit: Craig Fleming</span>
+	 			<span class="poster__credit">Photograph courtesy of Sheffield City Council</span>
 
 			</div>
 

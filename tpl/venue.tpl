@@ -4,7 +4,7 @@
 		<div class="grid__item  one-whole">
 
 			<div class="poster poster--map">
-
+	
 				<div class="poster__heading">
 					[[*longtitle]]
 
@@ -15,7 +15,7 @@
 							<div class="compact-form__cell">
 								<input type="text" name="saddr" placeholder="Get directions from&hellip;" class="compact-form__field" />
 							</div>
-							<input type="hidden" name="daddr" value="Crucible Theatre, Norfolk Street, Sheffield" />
+							<input type="hidden" name="daddr" value="17 Mappin Street, Sheffield, S1 4DT" />
 							<div class="compact-form__cell">
 								<button id="gMapSearch" type="submit" value="OK" class="btn">
 									<i class="icon icon--direction"></i>
